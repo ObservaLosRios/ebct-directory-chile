@@ -1,0 +1,75 @@
+empresa,region_casa_matriz,sector_actividad_principal,verticales_tecnologicas,verticales_lista,numero_verticales
+Acústica Marina Spa,Los Ríos,S. Otras actividades de servicios,"Deep y/o machine learning, Internet de las cosas","['Deep y/o machine learning', 'Internet de las cosas']",2
+Alga Vida Biotecnología Spa,Los Lagos,"A. Agricultura, ganadería, silvicultura y pesca","Agrotecnología, Biotecnología, Tecnologías alimentarias","['Agrotecnología', 'Biotecnología', 'Tecnologías alimentarias']",3
+Ambia Consultores Ambientales Limitada,Biobío,"M. Actividades profesionales, científicas y técnicas","Energía, Medioambiente","['Energía', 'Medioambiente']",2
+Aqua Analytix Spa,Los Ríos,"A. Agricultura, ganadería, silvicultura y pesca","Big Data, Deep y/o machine learning, Inteligencia artificial","['Big Data', 'Deep y/o machine learning', 'Inteligencia artificial']",3
+Beep Bop Instruments Spa,Los Lagos,"M. Actividades profesionales, científicas y técnicas","Fotónica y electrónica, Sistemas de Instrumentación, Tecnologías biomédicas","['Fotónica y electrónica', 'Sistemas de Instrumentación', 'Tecnologías biomédicas']",3
+Bioblock Force Spa,Los Ríos,"A. Agricultura, ganadería, silvicultura y pesca","Biotecnología, Nanotecnología","['Biotecnología', 'Nanotecnología']",2
+Biogenesis Animal Health Spa,Los Lagos,"A. Agricultura, ganadería, silvicultura y pesca","Agrotecnología, Nanotecnología","['Agrotecnología', 'Nanotecnología']",2
+Bioingentech,Biobío,"M. Actividades profesionales, científicas y técnicas","Biocomputación, Biomedicina, Biotecnología","['Biocomputación', 'Biomedicina', 'Biotecnología']",3
+Bioproc Spa,Biobío,"M. Actividades profesionales, científicas y técnicas","Biotecnología, Medioambiente","['Biotecnología', 'Medioambiente']",2
+Biotecnología E Innovación Spa,Los Ríos,"M. Actividades profesionales, científicas y técnicas","Biotecnología, Tecnologías alimentarias","['Biotecnología', 'Tecnologías alimentarias']",2
+Bluebe Spa,Biobío,"M. Actividades profesionales, científicas y técnicas","Agrotecnología, Manufactura avanzada, Sistemas de Instrumentación","['Agrotecnología', 'Manufactura avanzada', 'Sistemas de Instrumentación']",3
+Cadetech S A,Biobío,S. Otras actividades de servicios,"Computación de alto desempeño, Deep y/o machine learning, Tecnologías inalámbricas","['Computación de alto desempeño', 'Deep y/o machine learning', 'Tecnologías inalámbricas']",3
+Capybara Spa,Biobío,P. Enseñanza,"Deep y/o machine learning, Inteligencia artificial, Tecnologías para la enseñanza","['Deep y/o machine learning', 'Inteligencia artificial', 'Tecnologías para la enseñanza']",3
+Centro De Alta Tecnología Acuícola Austral Spa,Los Lagos,"A. Agricultura, ganadería, silvicultura y pesca","Energía, Inteligencia artificial, Manufactura avanzada","['Energía', 'Inteligencia artificial', 'Manufactura avanzada']",3
+Centro De Investigacion En Recursos Naturales Spa,Biobío,"M. Actividades profesionales, científicas y técnicas","Big Data, Biocomputación, Medioambiente","['Big Data', 'Biocomputación', 'Medioambiente']",3
+Centro De Investigacion Tecnologia E Innovacion Spa,Los Ríos,"A. Agricultura, ganadería, silvicultura y pesca","Biotecnología, Medioambiente","['Biotecnología', 'Medioambiente']",2
+Cettem Instruments Ltda,Biobío,C. Industria manufacturera,,[],0
+Cicla Spa,Biobío,C. Industria manufacturera,Materiales avanzados,['Materiales avanzados'],1
+Comercializadora Agricola Y Forestal Pinares Ltda,Biobío,"A. Agricultura, ganadería, silvicultura y pesca","Agrotecnología, Movilidad","['Agrotecnología', 'Movilidad']",2
+Comes Ti Spa,Biobío,S. Otras actividades de servicios,"Big Data, Inteligencia artificial","['Big Data', 'Inteligencia artificial']",2
+Cosmética La Vie Spa,Biobío,Otro (¿Cuál?),Biotecnología,['Biotecnología'],1
+Covis Spa,Biobío,C. Industria manufacturera,"Deep y/o machine learning, Inteligencia artificial, Internet de las cosas","['Deep y/o machine learning', 'Inteligencia artificial', 'Internet de las cosas']",3
+Cryo Spa,Biobío,J. Información y comunicaciones,Ciberseguridad,['Ciberseguridad'],1
+Ditnova Spa,Biobío,C. Industria manufacturera,Tecnología química,['Tecnología química'],1
+Eitech Spa,Biobío,"M. Actividades profesionales, científicas y técnicas","Biomedicina, Dispositivos médicos, Tecnologías biomédicas","['Biomedicina', 'Dispositivos médicos', 'Tecnologías biomédicas']",3
+Embau Ingenieria Spa,Los Lagos,"M. Actividades profesionales, científicas y técnicas","Inteligencia artificial, Internet de las cosas, Medioambiente","['Inteligencia artificial', 'Internet de las cosas', 'Medioambiente']",3
+Envirolift Spa,Los Lagos,"M. Actividades profesionales, científicas y técnicas","Manufactura avanzada, Materiales avanzados, Medioambiente","['Manufactura avanzada', 'Materiales avanzados', 'Medioambiente']",3
+Ewood Spa,Biobío,C. Industria manufacturera,"Manufactura avanzada, Movilidad","['Manufactura avanzada', 'Movilidad']",2
+Exploracion Y Modelacion Geofisica Geologica Terradata Limitada,La Araucanía,"M. Actividades profesionales, científicas y técnicas","Agrotecnología, Medioambiente, Sistemas de Instrumentación","['Agrotecnología', 'Medioambiente', 'Sistemas de Instrumentación']",3
+Felix Pezzi Farias,Los Lagos,"M. Actividades profesionales, científicas y técnicas","Agrotecnología, Medioambiente, Sistemas de Instrumentación","['Agrotecnología', 'Medioambiente', 'Sistemas de Instrumentación']",3
+Floresencia Limitada,Biobío,C. Industria manufacturera,Biotecnología,['Biotecnología'],1
+Geoelementos,Los Ríos,"M. Actividades profesionales, científicas y técnicas",Medioambiente,['Medioambiente'],1
+Green Focus Solutions Spa,Biobío,"M. Actividades profesionales, científicas y técnicas","Agrotecnología, Biotecnología, Tecnologías alimentarias","['Agrotecnología', 'Biotecnología', 'Tecnologías alimentarias']",3
+Inanis Spa,La Araucanía,J. Información y comunicaciones,"Big Data, Deep y/o machine learning, Inteligencia artificial","['Big Data', 'Deep y/o machine learning', 'Inteligencia artificial']",3
+Ingenieria La Spa,Los Lagos,"M. Actividades profesionales, científicas y técnicas","Computación de alto desempeño, Manufactura avanzada, Sistemas de Instrumentación","['Computación de alto desempeño', 'Manufactura avanzada', 'Sistemas de Instrumentación']",3
+Inversiones Oceanscan Spa,Los Lagos,"A. Agricultura, ganadería, silvicultura y pesca","Inteligencia artificial, Robótica","['Inteligencia artificial', 'Robótica']",2
+Keepex Spa,Los Lagos,"A. Agricultura, ganadería, silvicultura y pesca","Internet de las cosas, Manufactura avanzada, Medioambiente","['Internet de las cosas', 'Manufactura avanzada', 'Medioambiente']",3
+Konatec Spa,Biobío,B. Explotación de minas y canteras,"Big Data, Inteligencia artificial, Sistemas de Instrumentación","['Big Data', 'Inteligencia artificial', 'Sistemas de Instrumentación']",3
+Koyantu,Biobío,"A. Agricultura, ganadería, silvicultura y pesca","Agrotecnología, Biomedicina, Biotecnología","['Agrotecnología', 'Biomedicina', 'Biotecnología']",3
+Kura Biotech Spa,Los Lagos,"M. Actividades profesionales, científicas y técnicas",Biotecnología,['Biotecnología'],1
+Laboratorio Pasteur,Biobío,C. Industria manufacturera,"Biomedicina, Tecnología farmacéutica, Tecnología química","['Biomedicina', 'Tecnología farmacéutica', 'Tecnología química']",3
+Laminas Chile,Biobío,C. Industria manufacturera,Manufactura avanzada,['Manufactura avanzada'],1
+Lemusse Desarrolla Spa,Biobío,C. Industria manufacturera,Manufactura avanzada,['Manufactura avanzada'],1
+Livematrix Biotech Spa,Biobío,S. Otras actividades de servicios,"Biomedicina, Biotecnología, Tecnologías biomédicas","['Biomedicina', 'Biotecnología', 'Tecnologías biomédicas']",3
+Luis Manuel Aguirre España,Biobío,"R. Actividades artísticas, de entretenimiento y recreativas",Otras tecnologías de alta sofisticación,['Otras tecnologías de alta sofisticación'],1
+Mares Limpios Spa,Los Lagos,"E. Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación","Medioambiente, Tecnología química","['Medioambiente', 'Tecnología química']",2
+Maria Loreto Mendoza Sobarzo Manufactura Y Comercializacion Eirl,Los Ríos,C. Industria manufacturera,"Manufactura avanzada, Medioambiente","['Manufactura avanzada', 'Medioambiente']",2
+Melisa Institute Genomics Proteomics Spa,Biobío,"M. Actividades profesionales, científicas y técnicas","Biomedicina, Biotecnología, Tecnologías biomédicas","['Biomedicina', 'Biotecnología', 'Tecnologías biomédicas']",3
+Micbiotech Spa,Biobío,S. Otras actividades de servicios,Biotecnología,['Biotecnología'],1
+Myconativa,La Araucanía,"A. Agricultura, ganadería, silvicultura y pesca",Agrotecnología,['Agrotecnología'],1
+Mycoseaweed,Biobío,"M. Actividades profesionales, científicas y técnicas","Biotecnología, Tecnologías alimentarias","['Biotecnología', 'Tecnologías alimentarias']",2
+Nc Doing Spa,Biobío,C. Industria manufacturera,Nanotecnología,['Nanotecnología'],1
+Neocrop Technologies,Los Ríos,"A. Agricultura, ganadería, silvicultura y pesca","Agrotecnología, Biotecnología, Deep y/o machine learning","['Agrotecnología', 'Biotecnología', 'Deep y/o machine learning']",3
+Neurotech Spa,Biobío,"M. Actividades profesionales, científicas y técnicas","Biotecnología, Dispositivos médicos, Tecnologías biomédicas","['Biotecnología', 'Dispositivos médicos', 'Tecnologías biomédicas']",3
+Oceancare Spa,Los Lagos,"A. Agricultura, ganadería, silvicultura y pesca","Manufactura avanzada, Nanotecnología","['Manufactura avanzada', 'Nanotecnología']",2
+Patagonian Tech Spa,Biobío,"E. Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación",Medioambiente,['Medioambiente'],1
+Perceptron Spa,Los Ríos,"M. Actividades profesionales, científicas y técnicas","Big Data, Computación de alto desempeño, Inteligencia artificial","['Big Data', 'Computación de alto desempeño', 'Inteligencia artificial']",3
+Plancton Andino Spa,Los Lagos,"M. Actividades profesionales, científicas y técnicas","Big Data, Medioambiente, Sistemas de Instrumentación","['Big Data', 'Medioambiente', 'Sistemas de Instrumentación']",3
+Proyecto De Bioconversión De Residuos Orgánicos En Proceso De Constitución,Los Ríos,"A. Agricultura, ganadería, silvicultura y pesca",Medioambiente,['Medioambiente'],1
+Rolando Esteban Montero Arismendi Educacion Y Desarrollo De Sistemas Lautaros Eirl,Los Lagos,P. Enseñanza,"Deep y/o machine learning, Tecnologías para la enseñanza","['Deep y/o machine learning', 'Tecnologías para la enseñanza']",2
+Rootman Spa,Biobío,Otro (¿Cuál?),"Agrotecnología, Biotecnología, Materiales avanzados","['Agrotecnología', 'Biotecnología', 'Materiales avanzados']",3
+Rovisa Tech Spa,La Araucanía,C. Industria manufacturera,Energía,['Energía'],1
+Scanfish Spa,Los Ríos,"A. Agricultura, ganadería, silvicultura y pesca","Dispositivos médicos, Medioambiente","['Dispositivos médicos', 'Medioambiente']",2
+Sequre Spa,Biobío,J. Información y comunicaciones,"Ciberseguridad, Computación cuántica, Fotónica y electrónica","['Ciberseguridad', 'Computación cuántica', 'Fotónica y electrónica']",3
+Smartgrip Spa,Biobío,Q. Actividades de atención de la salud humana y de asistencia social,"Biónica, Robótica, Tecnologías biomédicas","['Biónica', 'Robótica', 'Tecnologías biomédicas']",3
+Soc Adl Diagnostic Chile Spa,Los Lagos,"M. Actividades profesionales, científicas y técnicas","Biotecnología, Tecnologías biomédicas","['Biotecnología', 'Tecnologías biomédicas']",2
+Sociedad Comercial Coloris Biotech,Biobío,C. Industria manufacturera,Biotecnología,['Biotecnología'],1
+Tecnologia Transformacion Y Control Spa,Biobío,S. Otras actividades de servicios,"Deep y/o machine learning, Inteligencia artificial","['Deep y/o machine learning', 'Inteligencia artificial']",2
+Tippmann Ingeniería Spa,Biobío,"E. Suministro de agua; evacuación de aguas residuales, gestión de desechos y descontaminación","Medioambiente, Tecnología química","['Medioambiente', 'Tecnología química']",2
+Tokosova Hydrovalv Spa,La Araucanía,C. Industria manufacturera,"Agrotecnología, Energía, Medioambiente","['Agrotecnología', 'Energía', 'Medioambiente']",3
+Transiot,Biobío,H. Transporte y almacenamiento,"Deep y/o machine learning, Inteligencia artificial, Movilidad","['Deep y/o machine learning', 'Inteligencia artificial', 'Movilidad']",3
+Traza Verde,Biobío,"M. Actividades profesionales, científicas y técnicas","Ingeniería genética, Medioambiente, Nanotecnología","['Ingeniería genética', 'Medioambiente', 'Nanotecnología']",3
+Umov Spa,Biobío,Q. Actividades de atención de la salud humana y de asistencia social,"Dispositivos médicos, Salud Digital","['Dispositivos médicos', 'Salud Digital']",2
+Vidal Y Urrutia Limitada,Biobío,"A. Agricultura, ganadería, silvicultura y pesca",Biotecnología,['Biotecnología'],1

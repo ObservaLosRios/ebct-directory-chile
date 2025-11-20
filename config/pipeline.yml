@@ -1,0 +1,8 @@
+paths:
+  raw_dataset: data/raw/ebct_chile_2025.csv
+  processed_companies: data/processed/companies_clean.csv
+  tech_focus: data/processed/companies_tech_focus.csv
+  regional_summary: data/processed/summary_region_sector.csv
+logging:
+  level: INFO
+  log_file: logs/pipeline.log
