@@ -82,6 +82,8 @@ def build_html(data_json: str) -> str:
         <title>Treemap Empresas por Región</title>
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/treemap.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
         <script src="https://code.highcharts.com/modules/accessibility.js"></script>
         <style>
             :root {
@@ -109,39 +111,36 @@ def build_html(data_json: str) -> str:
                 min-height: 650px;
                 position: relative;
             }
-            .theme-toggle {
-                position: absolute;
-                top: 18px;
-                right: 18px;
-                width: 38px;
-                height: 38px;
-                border-radius: 999px;
-                border: 1px solid rgba(15, 23, 42, 0.25);
-                background: rgba(255, 255, 255, 0.85);
-                color: #0f172a;
-                font-size: 1rem;
-                cursor: pointer;
-                transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                backdrop-filter: blur(10px);
-                z-index: 2;
-            }
-            .theme-toggle:hover {
-                transform: translateY(-1px);
-            }
         </style>
     </head>
     <body>
         <div class="chart-wrapper">
             <div class="chart-stage">
                 <div id="regionTreemapContainer"></div>
-                <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">☼</button>
             </div>
         </div>
         <script>
             const TREEMAP_DATA = __TREEMAP_DATA__;
+
+            const exportingOptions = {
+                enabled: true,
+                buttons: {
+                    contextButton: {
+                        menuItems: [
+                            'viewFullscreen',
+                            'printChart',
+                            'separator',
+                            'downloadPNG',
+                            'downloadJPEG',
+                            'downloadSVG',
+                            'separator',
+                            'downloadCSV',
+                            'downloadXLS',
+                            'viewData'
+                        ]
+                    }
+                }
+            };
 
             const chartOptions = {
                 chart: {
@@ -202,60 +201,11 @@ def build_html(data_json: str) -> str:
                         return `<b>${this.point.name}</b><br/>Total: <b>${rawValue}</b> ${label}`;
                     }
                 },
-                credits: { enabled: false }
+                credits: { enabled: false },
+                exporting: exportingOptions
             };
 
-            const chart = Highcharts.chart('regionTreemapContainer', chartOptions);
-
-            const toggleBtn = document.getElementById('themeToggle');
-            const chartWrapper = document.querySelector('.chart-wrapper');
-            let darkMode = false;
-
-            function applyTheme() {
-                chart.update({
-                    chart: {
-                        backgroundColor: darkMode ? '#0f172a' : '#ffffff'
-                    },
-                    title: { style: { color: darkMode ? '#f8fafc' : '#0f172a' } },
-                    subtitle: { style: { color: darkMode ? '#cbd5f5' : '#475569' } },
-                    tooltip: {
-                        backgroundColor: darkMode ? 'rgba(15,23,42,0.9)' : 'rgba(255,255,255,0.95)',
-                        style: { color: darkMode ? '#f8fafc' : '#0f172a' }
-                    },
-                    plotOptions: {
-                        treemap: {
-                            dataLabels: { style: { color: darkMode ? '#f8fafc' : '#0f172a' } }
-                        }
-                    }
-                });
-
-                if (chartWrapper) {
-                    chartWrapper.style.backgroundColor = darkMode ? '#0b1220' : '#ffffff';
-                    chartWrapper.style.boxShadow = darkMode
-                        ? '0 8px 30px rgba(0, 0, 0, 0.45)'
-                        : '0 8px 30px rgba(15, 23, 42, 0.08)';
-                }
-
-                chart.series.forEach(series => {
-                    series.points.forEach(point => {
-                        if (point.dataLabel) {
-                            point.dataLabel.css({ color: darkMode ? '#f8fafc' : '#0f172a' });
-                        }
-                        if (point.dataLabelUpper) {
-                            point.dataLabelUpper.css({ color: darkMode ? '#f8fafc' : '#0f172a' });
-                        }
-                    });
-                });
-            }
-
-            toggleBtn.addEventListener('click', () => {
-                darkMode = !darkMode;
-                toggleBtn.textContent = darkMode ? '☾' : '☼';
-                toggleBtn.style.backgroundColor = darkMode ? 'rgba(15,23,42,0.75)' : 'rgba(255, 255, 255, 0.85)';
-                toggleBtn.style.color = darkMode ? '#f8fafc' : '#0f172a';
-                toggleBtn.style.borderColor = darkMode ? 'rgba(248, 250, 252, 0.45)' : 'rgba(15, 23, 42, 0.25)';
-                applyTheme();
-            });
+            Highcharts.chart('regionTreemapContainer', chartOptions);
         </script>
     </body>
     </html>

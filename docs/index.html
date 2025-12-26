@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/treemap.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <style>
         .section { display: none; }
@@ -25,26 +27,6 @@
         .chart-stage canvas, .chart-stage svg { border-radius: 12px; }
         #regionBarContainer { min-height: 600px; }
         #regionTreemapContainer { min-height: 650px; }
-        .theme-toggle {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            width: 38px;
-            height: 38px;
-            border-radius: 999px;
-            border: 1px solid rgba(15, 23, 42, 0.25);
-            background: rgba(255, 255, 255, 0.85);
-            color: #0f172a;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(10px);
-            z-index: 2;
-        }
-        .theme-toggle:hover { transform: translateY(-1px); }
     </style>
 </head>
 <body>
@@ -64,7 +46,7 @@
     <nav class="nav-container">
         <div class="nav-links" id="nav-links">
             <span class="nav-link active" data-section="region-chart">Empresas por región</span>
-            <span class="nav-link" data-section="treemap-chart">Treemap por región</span>
+            <span class="nav-link" data-section="treemap-chart">Empresas por región</span>
         </div>
     </nav>
     
@@ -76,19 +58,17 @@
                 <div class="chart-card">
                     <div class="chart-stage">
                         <div id="regionBarContainer"></div>
-                        <button id="themeToggleBar" class="theme-toggle" aria-label="Cambiar tema">☼</button>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="treemap-chart" class="section">
-            <h2 class="section-title">Empresas por región (treemap)</h2>
+            <h2 class="section-title">Empresas por región</h2>
             <div class="chart-section">
                 <div class="chart-card">
                     <div class="chart-stage">
                         <div id="regionTreemapContainer"></div>
-                        <button id="themeToggleTreemap" class="theme-toggle" aria-label="Cambiar tema">☼</button>
                     </div>
                 </div>
             </div>
@@ -135,10 +115,31 @@
             }));
             const TREEMAP_DATA = [{"id": "los-rios", "name": "Los Ríos", "color": "#0F8B8D", "displayValue": 11}, {"id": "biobio", "name": "Biobío", "color": "#F4D35E", "displayValue": 42}, {"id": "la-araucania", "name": "La Araucanía", "color": "#EE964B", "displayValue": 5}, {"id": "los-lagos", "name": "Los Lagos", "color": "#9B5DE5", "displayValue": 16}, {"name": "Acústica Marina Spa", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Aqua Analytix Spa", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Bioblock Force Spa", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Biotecnología E Innovación Spa", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Centro De Investigacion Tecnologia E Innovacion Spa", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Geoelementos", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Maria Loreto Mendoza Sobarzo Manufactura Y Comercializacion Eirl", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Neocrop Technologies", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Perceptron Spa", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Proyecto De Bioconversión De Residuos Orgánicos En Proceso De Constitución", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Scanfish Spa", "parent": "los-rios", "value": 5, "displayValue": 1}, {"name": "Ambia Consultores Ambientales Limitada", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Bioingentech", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Bioproc Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Bluebe Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Cadetech S A", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Capybara Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Centro De Investigacion En Recursos Naturales Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Cettem Instruments Ltda", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Cicla Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Comercializadora Agricola Y Forestal Pinares Ltda", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Comes Ti Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Cosmética La Vie Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Covis Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Cryo Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Ditnova Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Eitech Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Ewood Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Floresencia Limitada", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Green Focus Solutions Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Konatec Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Koyantu", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Laboratorio Pasteur", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Laminas Chile", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Lemusse Desarrolla Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Livematrix Biotech Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Luis Manuel Aguirre España", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Melisa Institute Genomics Proteomics Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Micbiotech Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Mycoseaweed", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Nc Doing Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Neurotech Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Patagonian Tech Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Rootman Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Sequre Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Smartgrip Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Sociedad Comercial Coloris Biotech", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Tecnologia Transformacion Y Control Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Tippmann Ingeniería Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Transiot", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Traza Verde", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Umov Spa", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Vidal Y Urrutia Limitada", "parent": "biobio", "value": 1, "displayValue": 1}, {"name": "Exploracion Y Modelacion Geofisica Geologica Terradata Limitada", "parent": "la-araucania", "value": 1, "displayValue": 1}, {"name": "Inanis Spa", "parent": "la-araucania", "value": 1, "displayValue": 1}, {"name": "Myconativa", "parent": "la-araucania", "value": 1, "displayValue": 1}, {"name": "Rovisa Tech Spa", "parent": "la-araucania", "value": 1, "displayValue": 1}, {"name": "Tokosova Hydrovalv Spa", "parent": "la-araucania", "value": 1, "displayValue": 1}, {"name": "Alga Vida Biotecnología Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Beep Bop Instruments Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Biogenesis Animal Health Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Centro De Alta Tecnología Acuícola Austral Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Embau Ingenieria Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Envirolift Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Felix Pezzi Farias", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Ingenieria La Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Inversiones Oceanscan Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Keepex Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Kura Biotech Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Mares Limpios Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Oceancare Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Plancton Andino Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Rolando Esteban Montero Arismendi Educacion Y Desarrollo De Sistemas Lautaros Eirl", "parent": "los-lagos", "value": 1, "displayValue": 1}, {"name": "Soc Adl Diagnostic Chile Spa", "parent": "los-lagos", "value": 1, "displayValue": 1}];
 
+            const sharedExporting = {
+                enabled: true,
+                buttons: {
+                    contextButton: {
+                        menuItems: [
+                            'viewFullscreen',
+                            'printChart',
+                            'separator',
+                            'downloadPNG',
+                            'downloadJPEG',
+                            'downloadSVG',
+                            'separator',
+                            'downloadCSV',
+                            'downloadXLS',
+                            'viewData'
+                        ]
+                    }
+                }
+            };
+
             const barChart = Highcharts.chart('regionBarContainer', {
                 chart: { type: 'bar', backgroundColor: '#ffffff' },
                 title: { text: 'Concentración de empresas por región' },
                 subtitle: { text: 'Fuente: EBCT Chile 2025' },
+                accessibility: { enabled: false },
                 xAxis: {
                     categories: BAR_CATEGORIES,
                     title: { text: null },
@@ -171,56 +172,8 @@
                     shadow: true
                 },
                 credits: { enabled: false },
+                exporting: sharedExporting,
                 series: [{ name: 'Número de empresas', data: BAR_SERIES_DATA }]
-            });
-
-            const barToggle = document.getElementById('themeToggleBar');
-            const barWrapper = document.querySelector('#region-chart .chart-card');
-            let barDarkMode = false;
-
-            function applyBarTheme() {
-                barChart.update({
-                    chart: { backgroundColor: barDarkMode ? '#0f172a' : '#ffffff' },
-                    title: { style: { color: barDarkMode ? '#f8fafc' : '#0f172a' } },
-                    subtitle: { style: { color: barDarkMode ? '#cbd5f5' : '#475569' } },
-                    xAxis: {
-                        labels: { style: { color: barDarkMode ? '#e2e8f0' : '#0f172a' } },
-                        gridLineColor: barDarkMode ? 'rgba(248,250,252,0.15)' : '#e2e8f0'
-                    },
-                    yAxis: {
-                        labels: { style: { color: barDarkMode ? '#e2e8f0' : '#0f172a' } },
-                        title: { style: { color: barDarkMode ? '#e2e8f0' : '#0f172a' } }
-                    },
-                    legend: {
-                        itemStyle: { color: barDarkMode ? '#f8fafc' : '#0f172a' },
-                        backgroundColor: barDarkMode ? 'rgba(15, 23, 42, 0.65)' : 'rgba(255,255,255,1)'
-                    },
-                    tooltip: {
-                        backgroundColor: barDarkMode ? 'rgba(15,23,42,0.9)' : 'rgba(255,255,255,0.95)',
-                        style: { color: barDarkMode ? '#f8fafc' : '#0f172a' }
-                    },
-                    plotOptions: {
-                        bar: {
-                            dataLabels: { style: { color: barDarkMode ? '#f8fafc' : '#0f172a' } }
-                        }
-                    }
-                });
-
-                if (barWrapper) {
-                    barWrapper.style.backgroundColor = barDarkMode ? '#0b1220' : '#ffffff';
-                    barWrapper.style.boxShadow = barDarkMode
-                        ? '0 8px 30px rgba(0, 0, 0, 0.45)'
-                        : '0 8px 30px rgba(15, 23, 42, 0.08)';
-                }
-            }
-
-            barToggle?.addEventListener('click', () => {
-                barDarkMode = !barDarkMode;
-                barToggle.textContent = barDarkMode ? '☾' : '☼';
-                barToggle.style.backgroundColor = barDarkMode ? 'rgba(15,23,42,0.75)' : 'rgba(255, 255, 255, 0.85)';
-                barToggle.style.color = barDarkMode ? '#f8fafc' : '#0f172a';
-                barToggle.style.borderColor = barDarkMode ? 'rgba(248, 250, 252, 0.45)' : 'rgba(15, 23, 42, 0.25)';
-                applyBarTheme();
             });
 
             const treemapChart = Highcharts.chart('regionTreemapContainer', {
@@ -269,51 +222,8 @@
                         return `<b>${this.point.name}</b><br/>Total: <b>${rawValue}</b> ${label}`;
                     }
                 },
-                credits: { enabled: false }
-            });
-
-            const treemapToggle = document.getElementById('themeToggleTreemap');
-            const treemapWrapper = document.querySelector('#treemap-chart .chart-card');
-            let treemapDarkMode = false;
-
-            function applyTreemapTheme() {
-                treemapChart.update({
-                    chart: { backgroundColor: treemapDarkMode ? '#0f172a' : '#ffffff' },
-                    title: { style: { color: treemapDarkMode ? '#f8fafc' : '#0f172a' } },
-                    subtitle: { style: { color: treemapDarkMode ? '#cbd5f5' : '#475569' } },
-                    tooltip: {
-                        backgroundColor: treemapDarkMode ? 'rgba(15,23,42,0.9)' : 'rgba(255,255,255,0.95)',
-                        style: { color: treemapDarkMode ? '#f8fafc' : '#0f172a' }
-                    },
-                    plotOptions: {
-                        treemap: {
-                            dataLabels: { style: { color: treemapDarkMode ? '#f8fafc' : '#0f172a' } }
-                        }
-                    }
-                });
-
-                treemapChart.series.forEach((series) => {
-                    series.points.forEach((point) => {
-                        point.dataLabel?.css({ color: treemapDarkMode ? '#f8fafc' : '#0f172a' });
-                        point.dataLabelUpper?.css({ color: treemapDarkMode ? '#f8fafc' : '#0f172a' });
-                    });
-                });
-
-                if (treemapWrapper) {
-                    treemapWrapper.style.backgroundColor = treemapDarkMode ? '#0b1220' : '#ffffff';
-                    treemapWrapper.style.boxShadow = treemapDarkMode
-                        ? '0 8px 30px rgba(0, 0, 0, 0.45)'
-                        : '0 8px 30px rgba(15, 23, 42, 0.08)';
-                }
-            }
-
-            treemapToggle?.addEventListener('click', () => {
-                treemapDarkMode = !treemapDarkMode;
-                treemapToggle.textContent = treemapDarkMode ? '☾' : '☼';
-                treemapToggle.style.backgroundColor = treemapDarkMode ? 'rgba(15,23,42,0.75)' : 'rgba(255, 255, 255, 0.85)';
-                treemapToggle.style.color = treemapDarkMode ? '#f8fafc' : '#0f172a';
-                treemapToggle.style.borderColor = treemapDarkMode ? 'rgba(248, 250, 252, 0.45)' : 'rgba(15, 23, 42, 0.25)';
-                applyTreemapTheme();
+                credits: { enabled: false },
+                exporting: sharedExporting
             });
         });
     </script>
